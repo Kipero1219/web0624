@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+            <style>
+            /* 簡易的 Reset */
+            /* 米字代表全部的html */
+            *{
+                padding:0;
+                margin: 0;
+            }
+
+            .banner{
+                /* 滿版設定 */
+                width: 100%;   /* 寬度 */
+                height:100vh;  /* vh：可見高度 */
+
+                /* 多重背景：見曾被景色+背景圖 */
+                /* transparent：透明 */
+                background: linear-gradient(115deg,rgb(113, 234, 222) 50%,transparent 50%),
+                url("images/11.gif") right center / auto 100%;
+            }
+            /* 頁面顯示內容 */
+            .container{
+                width: 1200px;
+                margin: auto;
+                height: 100%;
+            }
+
+            /* 文字區 */
+            .banner-txt{
+                height: 100%;
+                /* 預設為水平排列 */
+                display: flex;
+                /* 方向改為垂直 */
+                flex-direction: column;
+                /* 垂直置中 */
+                justify-content: center;
+                /* 靠左對齊，來取消自動延展效果 */
+                align-items: flex-start;
+
+            }
+
+            h1{
+               font-size: 80px;
+               border-bottom: 1px solid black;
+               padding-bottom: 10px;
+               margin-bottom: 10px; 
+            }
+
+            h1 small{
+                /* 區塊 (堆疊) 顯示 */
+                display: block;
+                font-size: 40px;
+            }
+
+            .banner-txt h2{
+                font-size: 45px;
+                /* 下邊界加大 */
+                margin-bottom: 10px;
+            }
+
+            .banner-txt p {
+                font-size: 20px;
+                /* 行距 */
+                line-height: 1.5;
+            }
+        </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="container">
+            <div class="banner-txt">
+                <h1>
+                    老祖先石頭
+                    <small>
+                        美麗的大石頭
+                    </small>
+                </h1>
+                <h2>變成大理石</h2>
+                <p>理解大理石</p>
+                <p>消化大理石</p>
+                <p>成為大理石</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

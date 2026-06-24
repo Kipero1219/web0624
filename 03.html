@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-size: sans-serif;
+        }
+
+         html,
+         body{
+           height: 100%;
+        }
+
+         body{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           background-color: #003;
+        }
+
+         .wrap{
+            width: 100%;
+            /* RWD*/;
+            flex-wrap: wrap;
+            gap: 30px;
+            
+            display: flex;
+            margin: auto;
+            justify-content: center
+        }
+
+        .item{
+            border-radius: 12px;
+            border: 1px solid #fff;
+            width: 368px;/* 400-15-15-1-1 */
+            margin: 15px;
+            background-color: #fff;
+            transform: translateY(0px);
+            transition: all 0.5s;
+        }
+
+        .item:hover{
+            /* 向上移動 */
+            transform: translateY(-50px);
+        }
+
+        .item:hover .txt{
+            background:linear-gradient(rgb(110, 102, 228),rgb(153, 226, 165));
+        }
+
+        .item img{
+            border-radius: 12px;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            vertical-align: bottom;
+            /* 去除圖片下方的預設留白區 */
+        }
+
+        .item h2{
+            border-bottom: 1px dashed #003;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .item p{
+            line-height: 1.5;
+        }
+
+        .item .txt{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .item .txt::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-top: 50px solid transparent;
+            border-left: 184px solid rgb(255, 255, 255);
+            border-right: 184px solid rgb(255, 255, 255);
+            transform: translateY(-100%);
+        }
+
+        .item:hover .txt::before{
+             border-left: 184px solid rgb(110, 102, 228);
+            border-right: 184px solid rgb(110, 102, 228);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 卡片1 -->
+        <div class="item">
+            <img src="/images/05.jpg" alt="">
+            <!-- 倒三角形的位置 -->
+            <div class="txt">
+                <h2>人名</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur ea, asperiores libero ad quis sequi beatae quaerat laborum temporibus dignissimos doloremque repudiandae modi eum culpa voluptas delectus similique eveniet. Dignissimos doloribus minus necessitatibus libero dolorem quis, illo, veniam eaque error debitis reiciendis soluta esse, perferendis possimus facilis exercitationem. Deleniti?</p>
+            </div>
+        </div>
+        <!-- 卡片2 -->
+        <div class="item">
+            <img src="/images/06.jpg" alt="">
+            <div class="txt">
+                <h2>人名</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur ea, asperiores libero ad quis sequi beatae quaerat laborum temporibus dignissimos doloremque repudiandae modi eum culpa voluptas delectus similique eveniet. Dignissimos doloribus minus necessitatibus libero dolorem quis, illo, veniam eaque error debitis reiciendis soluta esse, perferendis possimus facilis exercitationem. Deleniti?</p>
+            </div>
+        </div>
+        <!-- 卡片3 -->
+        <div class="item">
+            <img src="/images/07.jpg" alt="">
+            <div class="txt">
+                <h2>人名</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur ea, asperiores libero ad quis sequi beatae quaerat laborum temporibus dignissimos doloremque repudiandae modi eum culpa voluptas delectus similique eveniet. Dignissimos doloribus minus necessitatibus libero dolorem quis, illo, veniam eaque error debitis reiciendis soluta esse, perferendis possimus facilis exercitationem. Deleniti?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
